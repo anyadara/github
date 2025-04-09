@@ -11,12 +11,16 @@ package activity;
 import java.util.Scanner;
 public class fullTimeEmployee extends employee {
     Scanner input=new Scanner(System.in);
-    private int yearlysalary;
+    private double yearlysalary;
     public fullTimeEmployee(String name, int age,int monthsalary) {
         super(name, age);
-        this.yearlysalary=monthsalary*12;
+       // this.yearlysalary=monthsalary*12;
+        setyearlySalary(monthsalary);
     }
     
+    public void setyearlySalary(double ms){
+         this.yearlysalary=ms*12;
+    }
     
     public double getyearlysalary(){
         return yearlysalary;
